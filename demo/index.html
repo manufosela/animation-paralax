@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background: #fafafa;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script type="module">
+      import { html, render } from 'lit';
+      import '../animation-paralax.js';
+
+      render(
+        html`
+          <animation-paralax>
+            <img
+              id="layer1"
+              src="backgrounds/background-sky.jpg"
+              alt="layer1"
+            />
+            <img
+              id="layer4"
+              src="backgrounds/rocks2.png"
+              alt="layer4"
+              data-style="height: 40%; bottom: 30%;"
+            />
+            <img
+              id="layer3"
+              src="backgrounds/rocks1.png"
+              alt="layer3"
+              data-style="height: 35%; bottom: 30%;"
+            />
+            <img
+              id="layer2"
+              src="backgrounds/hills.png"
+              alt="layer2"
+              data-style="height: 40%; bottom: 25%;"
+            />
+            <img
+              id="layer5"
+              src="backgrounds/foreground-forest.png"
+              alt="layer5"
+              data-style="height: 50%; bottom: 0;"
+            />
+          </animation-paralax>
+        `,
+        document.querySelector('#demo')
+      );
+    </script>
+  </body>
+</html>
